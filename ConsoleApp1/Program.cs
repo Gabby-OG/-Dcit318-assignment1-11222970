@@ -62,3 +62,15 @@ class Program
         else
             Console.WriteLine("Letter Grade: F");
     }
+    // Function to calculate ticket price based on age
+    static void TicketPriceCalculator()
+    {
+        Console.Write("\nEnter your age: ");
+        int age = int.Parse(Console.ReadLine()); 
+
+        // Apply discount pricing logic for children (<=12) or seniors (>=65)
+        if (age <= 12 || age >= 65)
+            Console.WriteLine("Ticket Price: GHC7"); 
+        else
+            Console.WriteLine("Ticket Price: GHC10"); 
+    }
