@@ -25,16 +25,16 @@ class Program
             switch (choice)
             {
                 case "1":
-                    GradeCalculator(); // Call grade calculator function
+                    GradeCalculator(); 
                     break;
                 case "2":
-                    TicketPriceCalculator(); // Call ticket price calculator function
+                    TicketPriceCalculator();
                     break;
                 case "3":
-                    TriangleTypeIdentifier(); // Call triangle type identifier function
+                    TriangleTypeIdentifier(); 
                     break;
                 case "4":
-                    exit = true; // Exit the loop and program
+                    exit = true; 
                     break;
                 default:
                     // Handle invalid menu input
@@ -74,3 +74,28 @@ class Program
         else
             Console.WriteLine("Ticket Price: GHC10"); 
     }
+    // Function to identify the type of triangle based on side lengths
+    static void TriangleTypeIdentifier()
+    {
+        Console.WriteLine("\nEnter the lengths of the three sides of the triangle:");
+
+        // Read and convert the three sides from user input
+        Console.Write("Side 1: ");
+        double side1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Side 2: ");
+        double side2 = double.Parse(Console.ReadLine());
+
+        Console.Write("Side 3: ");
+        double side3 = double.Parse(Console.ReadLine());
+
+        // Check triangle type:
+        if (side1 == side2 && side2 == side3)
+            Console.WriteLine("Triangle Type: Equilateral"); // All sides equal
+        else if (side1 == side2 || side1 == side3 || side2 == side3)
+            Console.WriteLine("Triangle Type: Isosceles"); // Two sides equal
+        else
+            Console.WriteLine("Triangle Type: Scalene"); // All sides different
+    }
+}
+
